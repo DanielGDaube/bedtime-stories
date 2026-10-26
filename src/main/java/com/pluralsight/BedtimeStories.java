@@ -11,6 +11,14 @@ public class BedtimeStories {
         System.out.println("What story do you want to hear?");
         try{
             BufferedReader storyReader = new BufferedReader(new FileReader(textScanner.nextLine()));
+
+            String line;
+            int lineCounter = 1;
+
+            while ((line = storyReader.readLine()) != null) {
+                System.out.println(lineCounter + "." + " " + line);
+                lineCounter++;
+            }
         }
         catch (Exception e){
             System.out.println("Invalid Input");
